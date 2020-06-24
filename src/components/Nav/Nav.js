@@ -39,10 +39,6 @@ const StyledLogoLink = styled(props => <Link {...props} />)`
   margin: 0;
   text-decoration: none;
   position: relative;
-
-  & img {
-    border-radius: 50%;
-  }
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -133,9 +129,9 @@ const StyledPages = styled.div`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 40, height: 40) {
+          fixed(width: 103, height: 34) {
             ...GatsbyImageSharpFixed
           }
         }

@@ -22,9 +22,9 @@ const StyledFooter = styled.footer`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 150, height: 150) {
+          fixed(width: 206, height: 68) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -41,10 +41,6 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
   padding: 20px 10px;
   text-decoration: none;
   color: #f9e242;
-
-  & img {
-    border-radius: 50%;
-  }
 `
 
 const StyledWrapper = styled.div`
