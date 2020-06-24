@@ -1,6 +1,5 @@
 export const phoneNumber = `504 207 847`
-export const email = `korona.pomocdrogowa@
-gmail.com`
+export const email = `mikar22@wp.pl`
 
 export const dataNames = [
   "Żołynia",

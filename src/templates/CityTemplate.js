@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
+import styled from "styled-components"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 // Utils
-import { phoneNumber } from 'utils/constants';
+import { phoneNumber } from "utils/constants"
 
 // Components
-import MainTemplate from 'templates/MainTemplate';
-import SEO from 'components/seo';
-import SectionTitle from 'components/simple/SectionTitle/SectionTitle';
+import MainTemplate from "templates/MainTemplate"
+import SEO from "components/seo"
+import SectionTitle from "components/simple/SectionTitle/SectionTitle"
 
 const StyledArticleWrapper = styled.article`
   max-width: 1440px;
   width: 90%;
   margin: 40px auto 20px;
-`;
+`
 
 const StyledSectionWrapper = styled.section`
   display: flex;
@@ -25,14 +25,14 @@ const StyledSectionWrapper = styled.section`
   @media (max-width: 992px) {
     flex-wrap: wrap;
   }
-`;
+`
 
 const StyledTextSide = styled.article`
   line-height: 1.3;
   font-size: 1.8rem;
   text-align: center;
   margin: auto;
-`;
+`
 
 const StyledFormLink = styled(props => <Link {...props} />)`
   display: inline-flex;
@@ -52,7 +52,7 @@ const StyledFormLink = styled(props => <Link {...props} />)`
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ const StyledFormLink = styled(props => <Link {...props} />)`
       transform: translateX(0);
     }
   }
-`;
+`
 
 const StyledPhoneLink = styled.a`
   display: inline-flex;
@@ -91,7 +91,7 @@ const StyledPhoneLink = styled.a`
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -110,24 +110,19 @@ const StyledPhoneLink = styled.a`
       transform: translateX(0);
     }
   }
-`;
+`
 
 const CityPageTemplate = ({ pageContext }) => {
   return (
     <MainTemplate>
-      <SEO title={`Pomoc drogowa w ${pageContext.city}`} />
+      <SEO title={`Rumcajs dostępny w  ${pageContext.city}`} />
       <SectionTitle>
-        Pomoc drogowa w lokalizacji: {pageContext.city} i okolice
+        Wynajem autokarów w lokalizacji: {pageContext.city} i okolice
       </SectionTitle>
       <StyledArticleWrapper>
         <StyledSectionWrapper>
           <StyledTextSide>
-            <p>
-              Pomagamy na drodze nawet w lokalizacji: {pageContext.city} i
-              okolice. Priorytetem jest dla nas niesienie pomocy tam gdzie jej
-              potrzebują dlatego jeśli tylko pojawi się na Twojej drodze jakiś
-              problem bądź potrzeba to staniemy temu wyzwaniu naprzeciw.
-            </p>
+            <p>Lorem ipsum dolor sit amet</p>
             <StyledPhoneLink href={`tel:${phoneNumber}`}>
               <span>Zadzwoń do nas</span>
             </StyledPhoneLink>
@@ -139,11 +134,11 @@ const CityPageTemplate = ({ pageContext }) => {
         </StyledSectionWrapper>
       </StyledArticleWrapper>
     </MainTemplate>
-  );
-};
+  )
+}
 
 CityPageTemplate.propTypes = {
   pageContext: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
-};
+}
 
-export default CityPageTemplate;
+export default CityPageTemplate

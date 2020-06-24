@@ -188,10 +188,7 @@ const Footer = () => {
           </StyledContactWrapper>
 
           <StyledCopy>
-            <div>
-              © Korona - Pomoc Drogowa - Laweta 24/7 - Holowanie - Przemysław
-              Pac
-            </div>
+            <div>© Rumcajs</div>
             <br />
             <div>
               Wykonanie strony:{" "}

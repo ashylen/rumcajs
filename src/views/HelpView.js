@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components"
+import PropTypes from "prop-types"
 import {
   faCarCrash,
   faSnowplow,
@@ -17,16 +17,16 @@ import {
   faAmbulance,
   faGlobeEurope,
   faParking,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons"
 
 // Components
-import InfoBox from 'components/simple/InfoBox/InfoBox';
+import InfoBox from "components/simple/InfoBox/InfoBox"
 
 const StyledSectionInfo = styled.div`
   color: #fff;
   background-color: #343a40;
   padding: 25px 0 35px;
-`;
+`
 
 const StyledSectionInfoInner = styled.div`
   max-width: 1440px;
@@ -39,7 +39,7 @@ const StyledSectionInfoInner = styled.div`
   @media (max-width: 992px) {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-`;
+`
 
 const StyledH1 = styled.h1`
   font-weight: 600;
@@ -49,11 +49,11 @@ const StyledH1 = styled.h1`
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
-`;
+`
 
 const StyledHeaderWrapper = styled.div`
   text-align: center;
-`;
+`
 
 const HelpView = ({ title }) => (
   <StyledSectionInfo>
@@ -61,7 +61,7 @@ const HelpView = ({ title }) => (
       {title && <StyledH1>{title}</StyledH1>}
     </StyledHeaderWrapper>
     <StyledSectionInfoInner>
-      <InfoBox icon={faShuttleVan}>Pomoc Drogowa samochodem 7-osobowym</InfoBox>
+      <InfoBox icon={faShuttleVan}>Wynajem autokarow</InfoBox>
       <InfoBox icon={faCarCrash}>Holowanie pojazdów osobowych</InfoBox>
       <InfoBox icon={faAmbulance}>
         Wyciąganie z rowów, lasów, pól, błota, zasp śnieżnych
@@ -92,14 +92,14 @@ const HelpView = ({ title }) => (
       </InfoBox>
     </StyledSectionInfoInner>
   </StyledSectionInfo>
-);
+)
 
 HelpView.defaultProps = {
-  title: '',
-};
+  title: "",
+}
 
 HelpView.propTypes = {
   title: PropTypes.string,
-};
+}
 
-export default HelpView;
+export default HelpView

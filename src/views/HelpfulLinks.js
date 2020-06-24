@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 
-import { Link } from 'gatsby';
-import styled from 'styled-components';
-import { dataNamesClear, dataNames } from 'utils/constants';
+import { Link } from "gatsby"
+import styled from "styled-components"
+import { dataNamesClear, dataNames } from "utils/constants"
 
 // Components
 
@@ -14,7 +14,7 @@ const StyledH3 = styled.h3`
   text-align: left;
 
   &:after {
-    content: '';
+    content: "";
     width: 70px;
     height: 2px;
     background-color: #f9e242;
@@ -22,7 +22,7 @@ const StyledH3 = styled.h3`
   @media (max-width: 992px) {
     font-size: 2.5rem;
   }
-`;
+`
 
 const StyledSectionHelpfulLinks = styled.section`
   border-top: 2px solid #343a40;
@@ -31,7 +31,7 @@ const StyledSectionHelpfulLinks = styled.section`
   flex-wrap: wrap;
   padding: 30px 0;
   justify-content: center;
-`;
+`
 
 const StyledHelpfulLinksInner = styled.section`
   max-width: 300px;
@@ -39,13 +39,13 @@ const StyledHelpfulLinksInner = styled.section`
   padding: 10px;
   margin: 0 10% 10px;
   text-align: left;
-`;
+`
 
 const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`;
+`
 
 const StyledListItem = styled(props => <Link {...props} />)`
   color: #f9e242;
@@ -61,7 +61,7 @@ const StyledListItem = styled(props => <Link {...props} />)`
     text-decoration: underline;
     transform: translateX(5px);
   }
-`;
+`
 
 const StyledListItemInline = styled(props => <Link {...props} />)`
   color: #f9e242;
@@ -80,7 +80,7 @@ const StyledListItemInline = styled(props => <Link {...props} />)`
     font-size: 1.7rem;
     line-height: 1.7;
   }
-`;
+`
 
 const HelpfulLinks = () => (
   <StyledSectionHelpfulLinks>
@@ -89,11 +89,11 @@ const HelpfulLinks = () => (
       <StyledList>
         {dataNamesClear.map((city, key) => (
           <StyledListItem
-            title={`Pomoc drogowa, laweta 24/7, holowanie ${dataNames[key]}`}
+            title={`Wynajem autokarów, Biuro turystyczne ${dataNames[key]}`}
             key={city}
-            to={`pomoc-drogowa-${city}`}
+            to={`wynajem-autokarow-${city}`}
           >
-            <span>{`• Pomoc drogowa ${dataNames[key]}`}</span>
+            <span>{`• Wynajem autokarów, Biuro turystyczne ${dataNames[key]}`}</span>
           </StyledListItem>
         ))}
       </StyledList>
@@ -109,12 +109,12 @@ const HelpfulLinks = () => (
             >
               {`${dataNames[key]}`}
             </StyledListItemInline>
-            {key + 1 < dataNamesClear.length ? `, ` : ''}
+            {key + 1 < dataNamesClear.length ? `, ` : ""}
           </React.Fragment>
         ))}
       </div>
     </StyledHelpfulLinksInner>
   </StyledSectionHelpfulLinks>
-);
+)
 
-export default HelpfulLinks;
+export default HelpfulLinks
