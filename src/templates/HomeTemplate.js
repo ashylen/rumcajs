@@ -1,17 +1,18 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import PropTypes from 'prop-types';
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { Reset } from 'styled-reset';
+import PropTypes from "prop-types"
+import styled, { createGlobalStyle, keyframes } from "styled-components"
+import { Reset } from "styled-reset"
+import { createMuiTheme } from "@material-ui/core"
 
 // Components
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
+import Header from "components/Header/Header"
+import Footer from "components/Footer/Footer"
 
 const StyledWrapper = styled.div`
   margin-top: 50px;
-`;
+`
 
 const loading = keyframes`
   0% {
@@ -23,7 +24,7 @@ const loading = keyframes`
     visibility: visible;
     pointer-events: none;
   }
-`;
+`
 
 const GlobalStyle = createGlobalStyle`
   html{
@@ -54,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   *, *:after, *:before{
     box-sizing: border-box;
   }
-`;
+`
 
 const MainTemplate = ({ children, isHomePage }) => {
   return (
@@ -65,16 +66,7 @@ const MainTemplate = ({ children, isHomePage }) => {
       <main>{children}</main>
       <Footer />
     </StyledWrapper>
-  );
-};
+  )
+}
 
-MainTemplate.defaultProps = {
-  isHomePage: false,
-};
-
-MainTemplate.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
-  isHomePage: PropTypes.bool,
-};
-
-export default MainTemplate;
+export default MainTemplate

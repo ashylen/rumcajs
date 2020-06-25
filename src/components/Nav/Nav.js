@@ -129,7 +129,7 @@ const StyledPages = styled.div`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "logo-white.png" }) {
         childImageSharp {
           fixed(width: 103, height: 34) {
             ...GatsbyImageSharpFixed
@@ -172,14 +172,14 @@ const Nav = ({ isHomePage }) => {
             to="/polityka-prywatnosci/"
             alt="Oferta"
           >
-            Test1
+            Wycieczki
           </StyledLink>
           <StyledLink
             activeClassName="active"
             to="/regulamin-serwisu/"
             alt="Cennik"
           >
-            Test2
+            Cennik
           </StyledLink>
         </StyledPages>
       </StyledInner>

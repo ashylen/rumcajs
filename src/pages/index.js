@@ -1,5 +1,7 @@
 import React, { useRef } from "react"
 
+import { Button } from "@material-ui/core"
+
 // Modules
 import styled, { keyframes } from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -21,6 +23,7 @@ import HomeBackgroundImage from "components/simple/BackgroundImage/BackgroundIma
 import HomeTemplate from "templates/HomeTemplate"
 import ContactBannerView from "views/ContactBannerView"
 import AboutUsView from "views/AboutUsView"
+import CostsView from "views/CostsView"
 import SEO from "components/seo"
 
 const slideIn = keyframes`
@@ -106,7 +109,9 @@ const StyledSectionInfo = styled.div`
   width: 90%;
   margin: 0 auto;
   padding: 50px 0 20px;
+`
 
+const StyledSectionInfoInner = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -205,6 +210,7 @@ const StyledBox = styled.div`
   max-width: 370px;
 
   display: flex;
+  flex-flow: column;
   align-items: center;
 `
 
@@ -214,11 +220,13 @@ const StyledBoxIcon = styled.div`
   margin-right: 20px;
   min-width: 25px;
   height: 25px;
+  margin-bottom: 20px;
   color: #f9e242;
 `
 
 const StyledBoxText = styled.div`
   font-size: 2rem;
+  text-align: justify;
 `
 
 const StyledBoxTitle = styled.h3`
@@ -248,13 +256,9 @@ const IndexPage = () => {
         <HomeBackgroundImage>
           <StyledSkewSecond />
           <StyledSectionWrapper>
-            <StyledH1>
-              Wynajem autokarów <br /> Biuro turystyczne
-            </StyledH1>
-            <StyledPhoneMain href={`tel:${phoneNumber}`}>
-              <span>{phoneNumber}</span>
-            </StyledPhoneMain>
-            <StyledH2>Biuro turystyczne, wynajem</StyledH2>
+            <StyledH1>Wycieczki</StyledH1>
+            <StyledH2>Bliskie i dalekie</StyledH2>
+            <p>Wybierz się z nami!</p>
           </StyledSectionWrapper>
           <StyledScrollDown onClick={onScrollButtonClick}>
             <StyledIconScrollDown>
@@ -264,75 +268,90 @@ const IndexPage = () => {
         </HomeBackgroundImage>
       </StyledTopWrapper>
       <AboutUsView />
+
       <StyledSectionInfo ref={SectionRef}>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faHistory} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Kontakt 24/7</StyledBoxTitle>
-            <StyledBoxDescription>
-              Wspracie całodobowe o każdej porze dnia i nocy.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faCoins} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Konkurencyjne ceny</StyledBoxTitle>
-            <StyledBoxDescription>
-              Usługi na najwyższym poziomie w konkurencyjnych cenach.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faParking} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Parking strzeżony</StyledBoxTitle>
-            <StyledBoxDescription>
-              Posiadamy własny parking, na którym możemy przechować holowane
-              auta.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faUserTie} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Profesjonalna obsługa</StyledBoxTitle>
-            <StyledBoxDescription>
-              Możesz nam zaufać, zawsze służymy pomocą oraz wsparciem.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faHandsHelping} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Zależy nam na Tobie</StyledBoxTitle>
-            <StyledBoxDescription>
-              Usługi wykonywane są z dbałością o szegóły.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
-        <StyledBox>
-          <StyledBoxIcon>
-            <FontAwesomeIcon icon={faUsers} />
-          </StyledBoxIcon>
-          <StyledBoxText>
-            <StyledBoxTitle>Doświadczony zespół</StyledBoxTitle>
-            <StyledBoxDescription>
-              Nasz zespół służy poradą w każdej kwestii.
-            </StyledBoxDescription>
-          </StyledBoxText>
-        </StyledBox>
+        <StyledH2>Co wpływa na cenę?</StyledH2>
+        <Button color="primary">Test btn</Button>
+
+        <StyledSectionInfoInner>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faHistory} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>TERMIN WYJAZDU</StyledBoxTitle>
+              <StyledBoxDescription>
+                Cena wielu usług turystycznych (zakwaterowanie, wyżywienie,
+                przewodnicy, autokar) zależy od terminu w którym ma odbywać się
+                wycieczka. W terminach szczytowych jak np. długie weekendy,
+                okres wakacyjny, ferie zimowe, imprezy masowe, ceny usług są
+                automatycznie podnoszone przez Naszych kontrahentów z racji
+                dużego zainteresowania. Aby obniżyć koszty można wybrać termin w
+                spokojniejszym czasie co także podniesie komfort pobytu poprzez
+                mniejsze „tłumy”;
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faCoins} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>Konkurencyjne ceny</StyledBoxTitle>
+              <StyledBoxDescription>
+                Usługi na najwyższym poziomie w konkurencyjnych cenach.
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faParking} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>Parking strzeżony</StyledBoxTitle>
+              <StyledBoxDescription>
+                Posiadamy własny parking, na którym możemy przechować holowane
+                auta.
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faUserTie} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>Profesjonalna obsługa</StyledBoxTitle>
+              <StyledBoxDescription>
+                Możesz nam zaufać, zawsze służymy pomocą oraz wsparciem.
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faHandsHelping} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>Zależy nam na Tobie</StyledBoxTitle>
+              <StyledBoxDescription>
+                Usługi wykonywane są z dbałością o szegóły.
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+          <StyledBox>
+            <StyledBoxIcon>
+              <FontAwesomeIcon icon={faUsers} />
+            </StyledBoxIcon>
+            <StyledBoxText>
+              <StyledBoxTitle>Doświadczony zespół</StyledBoxTitle>
+              <StyledBoxDescription>
+                Nasz zespół służy poradą w każdej kwestii.
+              </StyledBoxDescription>
+            </StyledBoxText>
+          </StyledBox>
+        </StyledSectionInfoInner>
       </StyledSectionInfo>
+      <CostsView />
+
       <ContactBannerView />
     </HomeTemplate>
   )

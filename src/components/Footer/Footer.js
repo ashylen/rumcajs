@@ -22,7 +22,7 @@ const StyledFooter = styled.footer`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "logo-white.png" }) {
         childImageSharp {
           fixed(width: 206, height: 68) {
             ...GatsbyImageSharpFixed
