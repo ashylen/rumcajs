@@ -1,6 +1,7 @@
 const path = require("path")
 
 module.exports = {
+  pathPrefix: "/rumcajs",
   siteMetadata: {
     title: `Rumcajs`,
     description: `Rumcajs opis strony`,
@@ -39,6 +40,12 @@ module.exports = {
         views: path.join(__dirname, "src/views"),
         utils: path.join(__dirname, "src/utils"),
         src: path.join(__dirname, "src"),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

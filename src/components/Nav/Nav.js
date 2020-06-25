@@ -167,11 +167,19 @@ const Nav = ({ isHomePage }) => {
           <StyledLink activeClassName="active" to="/kontakt/" alt="Kontakt">
             Kontakt
           </StyledLink>
-          <StyledLink activeClassName="active" to="/oferta/" alt="Oferta">
-            Oferta
+          <StyledLink
+            activeClassName="active"
+            to="/polityka-prywatnosci/"
+            alt="Oferta"
+          >
+            Test1
           </StyledLink>
-          <StyledLink activeClassName="active" to="/cennik/" alt="Cennik">
-            Cennik
+          <StyledLink
+            activeClassName="active"
+            to="/regulamin-serwisu/"
+            alt="Cennik"
+          >
+            Test2
           </StyledLink>
         </StyledPages>
       </StyledInner>
