@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: false,
+        displayName: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

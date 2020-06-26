@@ -2,17 +2,16 @@ import React from "react"
 
 // Modules
 import PropTypes from "prop-types"
+import { ThemeProvider } from "styled-components"
 import styled, { createGlobalStyle, keyframes } from "styled-components"
 import { Reset } from "styled-reset"
-import { createMuiTheme } from "@material-ui/core"
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
+import { StylesProvider } from "@material-ui/core/styles"
+import Nav from "components/Nav/Nav"
 
 // Components
 import Header from "components/Header/Header"
 import Footer from "components/Footer/Footer"
-
-const StyledWrapper = styled.div`
-  margin-top: 50px;
-`
 
 const loading = keyframes`
   0% {
@@ -57,16 +56,66 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const MainTemplate = ({ children, isHomePage }) => {
+export const theme = createMuiTheme({
+  direction: "ltr",
+  typography: {
+    fontFamily: '"Roboto", sans-serif',
+    fontSize: 16,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    button: {
+      textTransform: "none",
+    },
+    h1: {
+      color: "#D93232",
+      fontWeight: 500,
+      fontSize: "40px",
+    },
+    h2: {
+      fontWeight: "bold",
+      fontSize: "30px",
+    },
+    h3: {
+      fontWeight: 500,
+      fontSize: "25px",
+    },
+    h4: {
+      fontWeight: 500,
+      fontSize: "20px",
+    },
+    body2: {
+      fontWeight: 500,
+      fontSize: "24px",
+    },
+  },
+  palette: {
+    common: {
+      black: "#000",
+      white: "#fff",
+    },
+    primary: {
+      main: "#CF2B27", // red
+    },
+    secondary: {
+      main: "#00b0ff", // blue
+    },
+  },
+})
+
+const HomeTemplate = ({ children, isHomePage }) => {
   return (
-    <StyledWrapper>
-      <Reset />
-      <GlobalStyle />
-      <Header isHomePage={isHomePage} />
-      <main>{children}</main>
-      <Footer />
-    </StyledWrapper>
+    <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <StylesProvider injectFirst>
+          <Reset />
+          <GlobalStyle />
+          <Nav>{children}</Nav>
+          <Footer />
+        </StylesProvider>
+      </ThemeProvider>
+    </MuiThemeProvider>
   )
 }
 
-export default MainTemplate
+export default HomeTemplate
