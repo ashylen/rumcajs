@@ -1,16 +1,14 @@
 import React from "react"
 
 // Modules
-import PropTypes from "prop-types"
 import { ThemeProvider } from "styled-components"
-import styled, { createGlobalStyle, keyframes } from "styled-components"
+import { createGlobalStyle, keyframes } from "styled-components"
 import { Reset } from "styled-reset"
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
 import { StylesProvider } from "@material-ui/core/styles"
 import Nav from "components/Nav/Nav"
 
 // Components
-import Header from "components/Header/Header"
 import Footer from "components/Footer/Footer"
 
 const loading = keyframes`
@@ -35,8 +33,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     margin: 0;
     padding:0;
-    color: #fff;
-    background-color: #222;
 
     &:after{
       content: '';
@@ -103,11 +99,11 @@ export const theme = createMuiTheme({
   },
 })
 
-const HomeTemplate = ({ children, isHomePage }) => {
+const HomeTemplate = ({ children }) => {
   return (
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
+        <StylesProvider>
           <Reset />
           <GlobalStyle />
           <Nav>{children}</Nav>

@@ -16,9 +16,7 @@ const StyledH2 = styled.h2`
   }
 `
 
-const StyledSection = styled.section`
-  background-color: #343a40;
-`
+const StyledSection = styled.section``
 const StyledParagraph = styled.p`
   line-height: 1.4;
   font-size: 1.6rem;

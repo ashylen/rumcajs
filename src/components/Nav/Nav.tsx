@@ -3,18 +3,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import {
   Toolbar,
-  Typography,
   CssBaseline,
   useScrollTrigger,
   Box,
-  Container,
-  Slide,
+  Fade,
   Fab,
   Zoom,
 } from "@material-ui/core"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 import HomeIcon from "@material-ui/icons/Home"
-import { StyledLink, StyledScrollToTop, StyledAppBar } from "./styles"
+import { StyledScrollToTop, StyledAppBar } from "./styles"
+import NavLinks from "../NavLinks/NavLinks"
 
 const ScrollTop = ({ children, window }) => {
   const trigger = useScrollTrigger({
@@ -46,13 +45,18 @@ const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({ target: window ? window() : undefined })
 
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Fade appear={false} direction="down" in={!trigger}>
       {children}
-    </Slide>
+    </Fade>
   )
 }
 
 const Nav = ({ children, ...props }) => {
+  const scrolled = useScrollTrigger({
+    threshold: 200,
+    disableHysteresis: true,
+  })
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -60,26 +64,7 @@ const Nav = ({ children, ...props }) => {
         <StyledAppBar>
           <Toolbar>
             <Box display="flex" justifyContent="center" width="100%">
-              <StyledLink activeClassName="active" to="/" alt="Strona główna">
-                <HomeIcon />
-              </StyledLink>
-              <StyledLink activeClassName="active" to="/kontakt/" alt="Kontakt">
-                Kontakt
-              </StyledLink>
-              <StyledLink
-                activeClassName="active"
-                to="/polityka-prywatnosci/"
-                alt="Oferta"
-              >
-                Wycieczki
-              </StyledLink>
-              <StyledLink
-                activeClassName="active"
-                to="/regulamin-serwisu/"
-                alt="Cennik"
-              >
-                Cennik
-              </StyledLink>
+              <NavLinks scrolled={scrolled} />
             </Box>
           </Toolbar>
         </StyledAppBar>

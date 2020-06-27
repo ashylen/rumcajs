@@ -1,6 +1,4 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import styled, { css } from "styled-components"
 import { AppBar } from "@material-ui/core"
 
 export const StyledScrollToTop = styled.div`
@@ -11,40 +9,44 @@ export const StyledScrollToTop = styled.div`
 
 export const StyledAppBar = styled(AppBar)`
   background-color: transparent;
-`
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
 
-export const StyledLink = styled(props => <Link {...props} />)`
-  display: flex;
-  padding: 20px 0;
-  margin: 0 15px;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s;
-  color: #fff;
+  ${({ changeColor }) =>
+    !changeColor &&
+    css`
+      box-shadow: none;
+    `};
 
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: transparent;
-    bottom: 0;
-    left: 0;
-    transition: background-color 0.3s;
-  }
+  & > div {
+    background-color: #fff;
+    position: relative;
 
-  &:hover,
-  &.active {
-    color: #f9e242;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -64px;
+      top: 0;
+      z-index: 2;
+      height: 100%;
+      border-top: solid 32px #fff;
+      border-right: solid 32px #fff;
+      border-left: solid 32px transparent;
+      border-bottom: solid 32px transparent;
+    }
 
     &:after {
-      background: #f9e242;
+      content: "";
+      position: absolute;
+      right: -64px;
+      top: 0;
+      z-index: 2;
+      height: 100%;
+      border-right: solid 32px transparent;
+      border-top: solid 32px #fff;
+      border-left: solid 32px #fff;
+      border-bottom: solid 32px transparent;
     }
-  }
-
-  @media (max-width: 992px) {
-    padding: 20px 0;
-    font-size: 1.3rem;
-    margin: 0 8px;
   }
 `

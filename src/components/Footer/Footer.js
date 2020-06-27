@@ -10,9 +10,6 @@ import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons"
 // Utils
 import { phoneNumber, email } from "utils/constants"
 
-// Components
-import HelpfulLinks from "views/HelpfulLinks"
-
 const StyledFooter = styled.footer`
   background-color: #222;
   color: #fff;
@@ -135,7 +132,7 @@ const StyledContactWrapper = styled.div`
 const Footer = () => {
   return (
     <>
-      <HelpfulLinks />
+      {/* <HelpfulLinks /> */}
       <StyledFooter>
         <StyledWrapper>
           <StyledGatsbyLink to="/" alt="Strona główna">

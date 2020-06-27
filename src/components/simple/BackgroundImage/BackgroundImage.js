@@ -20,13 +20,11 @@ const BackgroundSection = ({ children, className }) => (
       }
     `}
     render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
           Tag="section"
-          fluid={imageData}
+          fluid={data.desktop.childImageSharp.fluid}
           className={className}
-          backgroundColor="#040e18"
         >
           {children}
         </BackgroundImage>
@@ -48,7 +46,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh);
   position: relative;
   display: flex;
 `
