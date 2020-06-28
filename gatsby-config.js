@@ -13,18 +13,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-theme-material-ui`,
-      options: {
-        webFontsConfig: {
-          fonts: {
-            google: [
-              {
-                family: `Montserrat`,
-                variants: [`300`, `400`, `500`],
-              },
-            ],
-          },
-        },
-      },
     },
     {
       resolve: `gatsby-plugin-material-ui`,
@@ -56,7 +44,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-root-import",
       options: {
-        pages_styles: path.join(__dirname, "src/pages_styles"),
+        pagesStyles: path.join(__dirname, "src/pagesStyles"),
         assets: path.join(__dirname, "src/assets"),
         components: path.join(__dirname, "src/components"),
         pages: path.join(__dirname, "src/pages"),

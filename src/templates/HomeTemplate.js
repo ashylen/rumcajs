@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
 export const theme = createMuiTheme({
   direction: "ltr",
   typography: {
-    fontFamily: '"Roboto", sans-serif',
+    fontFamily: '"Montserrat", sans-serif',
     fontSize: 16,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -64,8 +64,7 @@ export const theme = createMuiTheme({
       textTransform: "none",
     },
     h1: {
-      color: "#D93232",
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "40px",
     },
     h2: {

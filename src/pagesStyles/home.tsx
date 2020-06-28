@@ -10,7 +10,7 @@ export const StyledWrapper = styled.div`
   max-height: 100vh;
   text-align: center;
   color: #fff;
-
+  z-index: 2;
   @media (max-width: 992px) {
     background: #f9e242;
   }
@@ -25,7 +25,7 @@ export const StyledText = styled.div`
   font-weight: 600;
 `
 
-export const StyledFirstWord = styled.span`
+export const StyledFirstWord = styled.h1`
   display: flex;
   font-size: 10rem;
   justify-content: center;
@@ -51,4 +51,14 @@ export const StyledBackgroundSection = styled(HomeBackgroundImage)`
   background-position: top center;
   background-repeat: repeat-y;
   background-size: cover;
+`
+
+export const StyledSkew = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 `

@@ -13,10 +13,16 @@ export const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
-  color: #000;
+  color: ${({ theme }) => theme.palette.common.white};
+  font-weight: 600;
 
   &:hover {
-    color: #000;
+    color: ${({ theme }) => theme.palette.primary.main};
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.palette.primary.main};
+    cursor: default;
   }
 
   @media (max-width: 992px) {
@@ -24,4 +30,13 @@ export const StyledLink = styled(props => <Link {...props} />)`
     font-size: 1.3rem;
     margin: 0 8px;
   }
+`
+
+export const StyledLogoLink = styled(props => <Link {...props} />)`
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto 0 15px;
+  text-decoration: none;
+  position: relative;
 `

@@ -147,14 +147,6 @@ export const StyledSubmitButton = styled.button`
   }
 `
 
-// export const StyledInput = styled(Field)`
-//   padding: 10px;
-//   margin: 12px 0 0;
-//   width: 100%;
-//   border: 1px solid #d1d1d1;
-//   font-family: "Montserrat", sans-serif;
-// `
-
 export const StyledTextarea = styled.textarea`
   padding: 10px;
   margin: 12px 0 0;
@@ -162,45 +154,6 @@ export const StyledTextarea = styled.textarea`
   border: 1px solid #d1d1d1;
   font-family: "Montserrat", sans-serif;
 `
-
-// export const StyledCheckbox = styled(Field)`
-//   position: absolute;
-//   opacity: 0;
-
-//   & + label {
-//     position: relative;
-//     cursor: pointer;
-//     padding: 0;
-//   }
-
-//   & + label:before {
-//     content: "";
-//     margin-right: 10px;
-//     display: inline-block;
-//     vertical-align: text-top;
-//     width: 20px;
-//     height: 20px;
-//     border: 2px solid #f9e242;
-//   }
-
-//   &:focus + label:before {
-//     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-//   }
-
-//   &:checked + label:before {
-//     background: #f9e242;
-//   }
-
-//   &:disabled + label {
-//     color: #b8b8b8;
-//     cursor: auto;
-//   }
-
-//   &:disabled + label:before {
-//     box-shadow: none;
-//     background: #ddd;
-//   }
-// `
 
 export const StyledGatsbyLink = styled.a`
   color: #f9e242;

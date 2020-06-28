@@ -3,7 +3,7 @@ import React from "react"
 // Components
 import HomeTemplate from "templates/HomeTemplate"
 import SEO from "components/seo"
-import AboutUsView from "views/AboutUsView"
+import SpecialOffers from "views/SpecialOffers"
 
 import {
   StyledWrapper,
@@ -12,14 +12,16 @@ import {
   StyledSecondWord,
   StyledThirdWord,
   StyledBackgroundSection,
-} from "pages_styles/home"
+  StyledSkew,
+} from "pagesStyles/home"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <HomeTemplate>
       <SEO isHome title="Rumcajs - strona główna" />
       <StyledWrapper>
         <StyledBackgroundSection>
+          <StyledSkew />
           <StyledText>
             <StyledFirstWord>WYCIECZKI</StyledFirstWord>
             <StyledSecondWord>BLISKIE I DALEKIE</StyledSecondWord>
@@ -27,7 +29,7 @@ const IndexPage = () => {
           </StyledText>
         </StyledBackgroundSection>
       </StyledWrapper>
-      <AboutUsView />
+      <SpecialOffers />
     </HomeTemplate>
   )
 }

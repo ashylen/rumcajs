@@ -8,6 +8,8 @@ export const StyledScrollToTop = styled.div`
   right: 10px;
 `
 
+const NavColor = "rgba(0, 0, 0, 0.6)"
+
 export const StyledAppBar = styled(AppBar)`
   background-color: transparent;
   width: auto;
@@ -21,7 +23,7 @@ export const StyledAppBar = styled(AppBar)`
     `};
 
   & > div {
-    background-color: #fff;
+    background-color: ${NavColor};
     position: relative;
 
     &:before {
@@ -31,8 +33,8 @@ export const StyledAppBar = styled(AppBar)`
       top: 0;
       z-index: 2;
       height: 100%;
-      border-top: solid 32px #fff;
-      border-right: solid 32px #fff;
+      border-top: solid 32px ${NavColor};
+      border-right: solid 32px ${NavColor};
       border-left: solid 32px transparent;
       border-bottom: solid 32px transparent;
     }
@@ -45,8 +47,8 @@ export const StyledAppBar = styled(AppBar)`
       z-index: 2;
       height: 100%;
       border-right: solid 32px transparent;
-      border-top: solid 32px #fff;
-      border-left: solid 32px #fff;
+      border-top: solid 32px ${NavColor};
+      border-left: solid 32px ${NavColor};
       border-bottom: solid 32px transparent;
     }
   }

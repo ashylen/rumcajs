@@ -1,18 +1,27 @@
 import React from "react"
 
 import HomeIcon from "@material-ui/icons/Home"
-import { StyledLink } from "./styles"
+import { StyledLink, StyledLogoLink } from "./styles"
+import Logo from "components/Logo"
 
 const NavLinks: React.FC<{ scrolled?: boolean }> = ({ scrolled }) => {
   return (
     <>
+      <StyledLogoLink
+        scrolled={scrolled}
+        activeClassName="active"
+        to="/"
+        alt="Strona główna"
+      >
+        <Logo />
+      </StyledLogoLink>
       <StyledLink
         scrolled={scrolled}
         activeClassName="active"
         to="/"
         alt="Strona główna"
       >
-        <HomeIcon />
+        Strona główna
       </StyledLink>
       <StyledLink
         scrolled={scrolled}
