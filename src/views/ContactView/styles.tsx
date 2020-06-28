@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import { Field } from 'formik';
 import { StyledSectionWrapper } from "utils/SharedStyles"
 
 export const StyledSectionInfo = styled(StyledSectionWrapper)`
@@ -7,14 +6,15 @@ export const StyledSectionInfo = styled(StyledSectionWrapper)`
 
   h2 {
     display: inline-block;
-    margin-top: 70px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     position: relative;
 
     &:before {
       content: "";
       width: 80%;
       position: absolute;
-      top: -10px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
       right: 0;
@@ -26,7 +26,7 @@ export const StyledSectionInfo = styled(StyledSectionWrapper)`
       content: "";
       width: 60%;
       position: absolute;
-      top: -20px;
+      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
       right: 0;

@@ -4,13 +4,13 @@ import React from "react"
 import { StyledSectionInfo } from "./styles"
 import { Typography, Box } from "@material-ui/core"
 
-const SpecialOffersView: React.FC = () => (
+const AboutUsView: React.FC = () => (
   <StyledSectionInfo>
     <Box textAlign="center">
       <Typography variant="h1" component="h2" color="primary">
-        OFERTY SPECJALNE
+        O NAS
       </Typography>
-      <Typography variant="h5">zapoznaj się z Naszymi nowościami</Typography>
+      <Typography variant="h5">doświadczenie procentuje</Typography>
 
       <br />
       <br />
@@ -34,4 +34,4 @@ const SpecialOffersView: React.FC = () => (
   </StyledSectionInfo>
 )
 
-export default SpecialOffersView
+export default AboutUsView

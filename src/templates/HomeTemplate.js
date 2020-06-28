@@ -93,7 +93,7 @@ export const theme = createMuiTheme({
       main: "#CF2B27", // red
     },
     secondary: {
-      main: "#00b0ff", // blue
+      main: "#FBDA00", // blue
     },
   },
 })
@@ -105,7 +105,7 @@ const HomeTemplate = ({ children }) => {
         <StylesProvider>
           <Reset />
           <GlobalStyle />
-          <Nav>{children}</Nav>
+          <Nav isHome={true}>{children}</Nav>
           <Footer />
         </StylesProvider>
       </ThemeProvider>

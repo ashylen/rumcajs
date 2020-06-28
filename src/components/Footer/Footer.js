@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
 
 // Utils
 import { phoneNumber, email } from "utils/constants"
@@ -155,7 +155,7 @@ const Footer = () => {
             </StyledContent>
             <StyledContent>
               <div>
-                <StyledLink
+                {/* <StyledLink
                   icon
                   target="_blank"
                   linux
@@ -164,13 +164,13 @@ const Footer = () => {
                   alt="Instagram"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
-                </StyledLink>
+                </StyledLink> */}
                 <StyledLink
                   icon
                   target="_blank"
                   rel="noopener norefferer"
-                  alt="Facebook"
-                  href="https://www.facebook.com/koronapomocdrogowa"
+                  alt="Facebook Rumcajs"
+                  href="https://www.facebook.com/BTRumcajs"
                 >
                   <FontAwesomeIcon icon={faFacebookF} />
                 </StyledLink>

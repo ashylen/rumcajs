@@ -3,7 +3,8 @@ import React from "react"
 // Components
 import HomeTemplate from "templates/HomeTemplate"
 import SEO from "components/seo"
-import SpecialOffers from "views/SpecialOffers"
+import SpecialOffersView from "views/SpecialOffersView"
+import AboutUsView from "views/AboutUsView"
 
 import {
   StyledWrapper,
@@ -29,7 +30,8 @@ const IndexPage: React.FC = () => {
           </StyledText>
         </StyledBackgroundSection>
       </StyledWrapper>
-      <SpecialOffers />
+      <SpecialOffersView />
+      <AboutUsView />
     </HomeTemplate>
   )
 }

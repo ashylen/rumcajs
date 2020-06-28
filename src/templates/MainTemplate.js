@@ -1,29 +1,29 @@
 import React from "react"
 
 // Modules
-import PropTypes from "prop-types"
-import styled, { createGlobalStyle } from "styled-components"
+import { ThemeProvider } from "styled-components"
+import { createGlobalStyle, keyframes } from "styled-components"
 import { Reset } from "styled-reset"
-
-// Utils
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
+import { StylesProvider } from "@material-ui/core/styles"
+import Nav from "components/Nav/Nav"
 
 // Components
-import Header from "components/Header/Header"
 import Footer from "components/Footer/Footer"
 
-const StyledWrapper = styled.div`
-  margin-top: 54px;
-  display: flex;
-  flex-flow: column;
-  min-height: calc(100vh);
-`
-
-const StyledMain = styled.main`
-  flex-grow: 1;
+const loading = keyframes`
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+  }
 `
 
 const GlobalStyle = createGlobalStyle`
-
   html{
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
@@ -33,13 +33,18 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     margin: 0;
     padding:0;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color:#343a40;
-    color: #fff;
 
+    &:after{
+      content: '';
+      top: 0;
+      left:0;
+      bottom:0;
+      right:0;
+      background-color: #222;
+      animation: ${loading} 1s both;
+      z-index: 1000;
+      position: fixed;
+    }
   }
 
   *, *:after, *:before{
@@ -47,25 +52,65 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const MainTemplate = ({ children, isHomePage }) => {
+export const theme = createMuiTheme({
+  direction: "ltr",
+  typography: {
+    fontFamily: '"Montserrat", sans-serif',
+    fontSize: 16,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    button: {
+      textTransform: "none",
+    },
+    h1: {
+      fontWeight: 600,
+      fontSize: "40px",
+    },
+    h2: {
+      fontWeight: "bold",
+      fontSize: "30px",
+    },
+    h3: {
+      fontWeight: 500,
+      fontSize: "25px",
+    },
+    h4: {
+      fontWeight: 500,
+      fontSize: "20px",
+    },
+    body2: {
+      fontWeight: 500,
+      fontSize: "24px",
+    },
+  },
+  palette: {
+    common: {
+      black: "#000",
+      white: "#fff",
+    },
+    primary: {
+      main: "#CF2B27", // red
+    },
+    secondary: {
+      main: "#00b0ff", // blue
+    },
+  },
+})
+
+const HomeTemplate = ({ children }) => {
   return (
-    <StyledWrapper>
-      <Reset />
-      <GlobalStyle />
-      <Header isHomePage={isHomePage} />
-      <StyledMain>{children}</StyledMain>
-      <Footer />
-    </StyledWrapper>
+    <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <StylesProvider>
+          <Reset />
+          <GlobalStyle />
+          <Nav>{children}</Nav>
+          <Footer />
+        </StylesProvider>
+      </ThemeProvider>
+    </MuiThemeProvider>
   )
 }
 
-MainTemplate.defaultProps = {
-  isHomePage: false,
-}
-
-MainTemplate.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
-  isHomePage: PropTypes.bool,
-}
-
-export default MainTemplate
+export default HomeTemplate

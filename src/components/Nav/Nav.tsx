@@ -50,24 +50,24 @@ const HideOnScroll = ({ children, window }) => {
   )
 }
 
-const Nav = ({ children, ...props }) => {
-  const scrolled = useScrollTrigger({
-    threshold: 200,
-    disableHysteresis: true,
-  })
-
+const Nav: React.FC<{ isHome?: boolean }> = ({
+  isHome,
+  children,
+  ...props
+}) => {
   return (
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <StyledAppBar>
+        <StyledAppBar isHome={isHome}>
           <Toolbar>
             <Box display="flex" justifyContent="center" width="100%">
-              <NavLinks scrolled={scrolled} />
+              <NavLinks isHome={isHome} />
             </Box>
           </Toolbar>
         </StyledAppBar>
       </HideOnScroll>
+      {!isHome && <Toolbar />}
       <div id="back-to-top-anchor"></div>
       <main>{children}</main>
       <ScrollTop {...props}>

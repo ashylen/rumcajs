@@ -5,12 +5,12 @@ import React from "react"
 // Components
 import MainTemplate from "templates/MainTemplate"
 import SEO from "components/seo"
-import ContactView from "views/ContactView"
+import TripsView from "views/TripsView"
 
 const ContactPage = () => (
   <MainTemplate>
     <SEO title="Kontakt" />
-    <ContactView />
+    <TripsView />
   </MainTemplate>
 )
 

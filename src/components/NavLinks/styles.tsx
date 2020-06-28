@@ -1,10 +1,6 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-
-export const StyledWrapper = styled.div<{ scrolled?: boolean }>`
-  display: flex;
-`
 
 export const StyledLink = styled(props => <Link {...props} />)`
   display: flex;
@@ -17,11 +13,36 @@ export const StyledLink = styled(props => <Link {...props} />)`
   font-weight: 600;
 
   &:hover {
-    color: ${({ theme }) => theme.palette.primary.main};
+    ${({ isHome }) =>
+      isHome &&
+      css`
+        color: ${({ theme }) => theme.palette.primary.main};
+      `}
   }
 
   &.active {
-    color: ${({ theme }) => theme.palette.primary.main};
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      height: 2px;
+    }
+    ${({ isHome }) =>
+      isHome
+        ? css`
+            color: ${({ theme }) => theme.palette.primary.main};
+            &:before {
+              background-color: ${({ theme }) => theme.palette.primary.main};
+            }
+          `
+        : css`
+            &:before {
+              background-color: ${({ theme }) => theme.palette.common.white};
+            }
+          `}
+
     cursor: default;
   }
 

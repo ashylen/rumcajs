@@ -3,20 +3,16 @@ import React from "react"
 import HomeIcon from "@material-ui/icons/Home"
 import { StyledLink, StyledLogoLink } from "./styles"
 import Logo from "components/Logo"
+import LogoWhite from "components/LogoWhite"
 
-const NavLinks: React.FC<{ scrolled?: boolean }> = ({ scrolled }) => {
+const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {
   return (
     <>
-      <StyledLogoLink
-        scrolled={scrolled}
-        activeClassName="active"
-        to="/"
-        alt="Strona główna"
-      >
-        <Logo />
+      <StyledLogoLink activeClassName="active" to="/" alt="Strona główna">
+        {isHome ? <Logo /> : <LogoWhite />}
       </StyledLogoLink>
       <StyledLink
-        scrolled={scrolled}
+        isHome={isHome}
         activeClassName="active"
         to="/"
         alt="Strona główna"
@@ -24,7 +20,7 @@ const NavLinks: React.FC<{ scrolled?: boolean }> = ({ scrolled }) => {
         Strona główna
       </StyledLink>
       <StyledLink
-        scrolled={scrolled}
+        isHome={isHome}
         activeClassName="active"
         to="/kontakt/"
         alt="Kontakt"
@@ -32,20 +28,12 @@ const NavLinks: React.FC<{ scrolled?: boolean }> = ({ scrolled }) => {
         Kontakt
       </StyledLink>
       <StyledLink
-        scrolled={scrolled}
+        isHome={isHome}
         activeClassName="active"
-        to="/polityka-prywatnosci/"
+        to="/wycieczki/"
         alt="Oferta"
       >
         Wycieczki
-      </StyledLink>
-      <StyledLink
-        scrolled={scrolled}
-        activeClassName="active"
-        to="/regulamin-serwisu/"
-        alt="Cennik"
-      >
-        Cennik
       </StyledLink>
     </>
   )
