@@ -131,7 +131,6 @@ const StyledContactWrapper = styled.div`
 const Footer = () => {
   return (
     <>
-      {/* <HelpfulLinks /> */}
       <StyledFooter>
         <StyledWrapper>
           <StyledGatsbyLink to="/" alt="Strona główna">

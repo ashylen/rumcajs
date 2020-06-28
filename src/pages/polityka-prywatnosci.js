@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import styled from 'styled-components';
+import styled from "styled-components"
 
 // Components
-import MainTemplate from 'templates/MainTemplate';
-import SEO from 'components/seo';
-import SectionTitle from 'components/simple/SectionTitle/SectionTitle';
+import MainTemplate from "templates/MainTemplate"
+import SEO from "components/seo"
+import SectionTitle from "components/simple/SectionTitle/SectionTitle"
 
 const SectionDesc = styled.article`
   max-width: 1440px;
   width: 90%;
   margin: 40px auto 20px;
   line-height: 1.5;
-`;
+`
 
 const PrivacyPolicy = () => (
   <MainTemplate>
@@ -86,6 +86,6 @@ const PrivacyPolicy = () => (
       wysokości do 10 % przychodów za poprzedni rok rozliczeniowy.
     </SectionDesc>
   </MainTemplate>
-);
+)
 
-export default PrivacyPolicy;
+export default PrivacyPolicy

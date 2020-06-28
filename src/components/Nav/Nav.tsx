@@ -11,7 +11,6 @@ import {
   Zoom,
 } from "@material-ui/core"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
-import HomeIcon from "@material-ui/icons/Home"
 import { StyledScrollToTop, StyledAppBar } from "./styles"
 import NavLinks from "../NavLinks/NavLinks"
 
@@ -45,7 +44,7 @@ const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({ target: window ? window() : undefined })
 
   return (
-    <Fade appear={false} direction="down" in={!trigger}>
+    <Fade appear={false} in={!trigger}>
       {children}
     </Fade>
   )

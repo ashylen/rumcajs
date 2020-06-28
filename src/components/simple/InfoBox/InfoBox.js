@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const StyledH2 = styled.h2`
   text-align: center;
   font-size: 1.6rem;
   margin: 10px auto 15px;
   line-height: 1.2;
-`;
+`
 
 const StyledIcon = styled.div`
   text-align: center;
   font-size: 3rem;
   padding-bottom: 10px;
-`;
+`
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
   transition: transform 0.3s;
 
   &:after {
-    content: '';
+    content: "";
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -39,7 +39,7 @@ const StyledWrapper = styled.div`
   &:hover {
     transform: translateY(-3px);
   }
-`;
+`
 
 const InfoBox = ({ icon, children }) => {
   return (
@@ -49,12 +49,12 @@ const InfoBox = ({ icon, children }) => {
       </StyledIcon>
       <StyledH2>{children}</StyledH2>
     </StyledWrapper>
-  );
-};
+  )
+}
 
 InfoBox.propTypes = {
   children: PropTypes.string.isRequired,
   icon: PropTypes.object.isRequired,
-};
+}
 
-export default InfoBox;
+export default InfoBox

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 
 // Modules
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
 const StyledH1 = styled.h1`
   text-align: center;
@@ -15,7 +15,7 @@ const StyledH1 = styled.h1`
   line-height: 1.2;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100px;
     height: 2px;
@@ -26,14 +26,14 @@ const StyledH1 = styled.h1`
     transform: translateX(-50%);
     transition: background-color 0.3s;
   }
-`;
+`
 
 const SectionTitle = ({ children }) => {
-  return <StyledH1>{children}</StyledH1>;
-};
+  return <StyledH1>{children}</StyledH1>
+}
 
 SectionTitle.propTypes = {
   children: PropTypes.string.isRequired,
-};
+}
 
-export default SectionTitle;
+export default SectionTitle

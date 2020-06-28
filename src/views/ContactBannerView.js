@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { Link } from "gatsby"
+import styled from "styled-components"
 
 // Components
 
@@ -14,11 +14,11 @@ const StyledH2 = styled.h2`
   @media (max-width: 992px) {
     font-size: 2.5rem;
   }
-`;
+`
 
 const StyledSectionContact = styled.section`
   background-color: #343a40;
-`;
+`
 
 const StyledContactInner = styled.section`
   max-width: 1440px;
@@ -27,7 +27,7 @@ const StyledContactInner = styled.section`
   text-align: center;
 
   padding: 30px 0;
-`;
+`
 
 const StyledFormLink = styled(props => <Link {...props} />)`
   display: inline-flex;
@@ -48,7 +48,7 @@ const StyledFormLink = styled(props => <Link {...props} />)`
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +67,7 @@ const StyledFormLink = styled(props => <Link {...props} />)`
       transform: translateX(0);
     }
   }
-`;
+`
 
 const ContactBannerView = () => (
   <StyledSectionContact>
@@ -78,6 +78,6 @@ const ContactBannerView = () => (
       </StyledFormLink>
     </StyledContactInner>
   </StyledSectionContact>
-);
+)
 
-export default ContactBannerView;
+export default ContactBannerView
