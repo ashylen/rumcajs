@@ -30,13 +30,21 @@ export const StyledFirstWord = styled.h1`
   font-size: 10rem;
   justify-content: center;
   margin-bottom: 20px;
+
+  @media (max-width: 1023px) {
+    font-size: 5rem;
+  }
 `
 
 export const StyledSecondWord = styled.span`
   display: flex;
-  font-size: 4rem;
   justify-content: center;
   margin-bottom: 20px;
+  font-size: 4rem;
+
+  @media (max-width: 1023px) {
+    font-size: 2rem;
+  }
 `
 
 export const StyledThirdWord = styled.span`
@@ -44,6 +52,10 @@ export const StyledThirdWord = styled.span`
   font-size: 2rem;
   justify-content: center;
   font-weight: 500;
+
+  @media (max-width: 1023px) {
+    font-size: 1rem;
+  }
 `
 
 export const StyledBackgroundSection = styled(HomeBackgroundImage)`

@@ -46,10 +46,8 @@ export const StyledLink = styled(props => <Link {...props} />)`
     cursor: default;
   }
 
-  @media (max-width: 992px) {
-    padding: 20px 0;
-    font-size: 1.3rem;
-    margin: 0 8px;
+  @media (max-width: 1024px) {
+    display: none;
   }
 `
 
@@ -60,4 +58,8 @@ export const StyledLogoLink = styled(props => <Link {...props} />)`
   margin: 0 auto 0 15px;
   text-decoration: none;
   position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 5px 0;
+  }
 `

@@ -18,10 +18,18 @@ export const StyledAppBar = styled(AppBar)`
     background-color: ${({ theme }) => theme.palette.primary.main};
   }
 
+  @media (min-width: 1023px) {
+    & button {
+      opacity: 0;
+    }
+  }
+
   ${({ isHome }) =>
     isHome &&
     css`
-      width: auto;
+      @media (min-width: 1023px) {
+        width: 70vw;
+      }
       left: 50%;
       transform: translateX(-50%);
 
@@ -40,6 +48,10 @@ export const StyledAppBar = styled(AppBar)`
           border-right: solid 32px ${HomeNavColor};
           border-left: solid 32px transparent;
           border-bottom: solid 32px transparent;
+
+          @media (max-width: 1024px) {
+            display: none;
+          }
         }
 
         &:after {
@@ -53,6 +65,10 @@ export const StyledAppBar = styled(AppBar)`
           border-top: solid 32px ${HomeNavColor};
           border-left: solid 32px ${HomeNavColor};
           border-bottom: solid 32px transparent;
+
+          @media (max-width: 1024px) {
+            display: none;
+          }
         }
       }
     `}

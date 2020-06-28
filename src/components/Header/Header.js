@@ -51,7 +51,6 @@ const StyledLink = styled.a`
   border-radius: 50px;
   box-shadow: 0 0 0 0 rgba(174, 178, 178, 0.8);
   animation: ${pulse} 2s infinite, ${ring} 2s infinite;
-  z-index: 200;
 `
 
 const StyledHeader = styled.header`

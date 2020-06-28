@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
       right:0;
       background-color: #222;
       animation: ${loading} 1s both;
-      z-index: 1000;
+      z-index: 10;
       position: fixed;
     }
   }

@@ -56,10 +56,6 @@ const StyledCopy = styled.div`
   position: relative;
   margin-top: 10px;
 
-  @media (max-width: 550px) {
-    align-items: flex-start;
-  }
-
   &:before {
     content: "";
     position: absolute;
@@ -83,10 +79,6 @@ const StyledContent = styled.div`
   align-items: center;
   font-size: 2rem;
   margin-bottom: 5px;
-
-  @media (max-width: 550px) {
-    align-items: flex-start;
-  }
 `
 
 const StyledItemHeading = styled.div`
