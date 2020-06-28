@@ -16,7 +16,6 @@ const StyledH2 = styled.h2`
   }
 `
 
-const StyledSection = styled.section``
 const StyledParagraph = styled.p`
   line-height: 1.4;
   font-size: 1.6rem;
@@ -38,7 +37,7 @@ const StyledInner = styled.section`
 `
 
 const AboutUsView = () => (
-  <StyledSection>
+  <div>
     <StyledInner>
       <StyledH2>O NAS</StyledH2>
       <StyledParagraph>
@@ -69,7 +68,7 @@ const AboutUsView = () => (
         autokarze chyba że umowa z klientem stanowi inaczej.
       </StyledParagraph>
     </StyledInner>
-  </StyledSection>
+  </div>
 )
 
 export default AboutUsView

@@ -12,7 +12,7 @@ import {
   StyledSecondWord,
   StyledThirdWord,
   StyledBackgroundSection,
-} from "./styles/home"
+} from "pages_styles/home"
 
 const IndexPage = () => {
   return (
