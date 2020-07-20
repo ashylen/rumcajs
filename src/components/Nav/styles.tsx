@@ -16,6 +16,7 @@ export const StyledAppBar = styled(AppBar)`
 
   & > div {
     background-color: ${({ theme }) => theme.palette.primary.main};
+    box-shadow: 0 0 20px -4px black;
   }
 
   @media (min-width: 1023px) {
@@ -34,7 +35,7 @@ export const StyledAppBar = styled(AppBar)`
       transform: translateX(-50%);
 
       & > div {
-        background-color: ${HomeNavColor};
+        background-color: ${({ theme }) => theme.palette.primary.main};
         position: relative;
 
         &:before {
@@ -44,8 +45,8 @@ export const StyledAppBar = styled(AppBar)`
           top: 0;
           z-index: 2;
           height: 100%;
-          border-top: solid 32px ${HomeNavColor};
-          border-right: solid 32px ${HomeNavColor};
+          border-top: solid 32px ${({ theme }) => theme.palette.primary.main};
+          border-right: solid 32px ${({ theme }) => theme.palette.primary.main};
           border-left: solid 32px transparent;
           border-bottom: solid 32px transparent;
 
@@ -62,8 +63,8 @@ export const StyledAppBar = styled(AppBar)`
           z-index: 2;
           height: 100%;
           border-right: solid 32px transparent;
-          border-top: solid 32px ${HomeNavColor};
-          border-left: solid 32px ${HomeNavColor};
+          border-top: solid 32px ${({ theme }) => theme.palette.primary.main};
+          border-left: solid 32px ${({ theme }) => theme.palette.primary.main};
           border-bottom: solid 32px transparent;
 
           @media (max-width: 1024px) {

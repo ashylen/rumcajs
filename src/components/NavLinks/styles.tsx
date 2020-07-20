@@ -12,14 +12,6 @@ export const StyledLink = styled(props => <Link {...props} />)`
   color: ${({ theme }) => theme.palette.common.white};
   font-weight: 600;
 
-  &:hover {
-    ${({ isHome }) =>
-      isHome &&
-      css`
-        color: ${({ theme }) => theme.palette.primary.main};
-      `}
-  }
-
   &.active {
     &:before {
       content: "";
@@ -32,9 +24,8 @@ export const StyledLink = styled(props => <Link {...props} />)`
     ${({ isHome }) =>
       isHome
         ? css`
-            color: ${({ theme }) => theme.palette.primary.main};
             &:before {
-              background-color: ${({ theme }) => theme.palette.primary.main};
+              background-color: ${({ theme }) => theme.palette.common.white};
             }
           `
         : css`

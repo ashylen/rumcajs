@@ -16,7 +16,7 @@ const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {
   return (
     <>
       <StyledLogoLink activeClassName="active" to="/" alt="Strona główna">
-        {isHome ? <Logo /> : <LogoWhite />}
+        <LogoWhite />
       </StyledLogoLink>
       <StyledLink
         isHome={isHome}
