@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 // Components
 import { StyledSectionInfo } from "./styles"
-import { Box } from "@material-ui/core"
+import { Box, Button } from "@material-ui/core"
 import SectionTitle from "components/atoms/SectionTitle"
 
 const SchoolImage = () => {
@@ -38,13 +38,37 @@ const TripView: React.FC = () => (
       </SectionTitle>
     </Box>
     <Box textAlign="center" display="flex" justifyContent="space-around">
-      <Box maxWidth="300px" width="100%">
+      <Box maxWidth="300px" width="100%" position="relative">
         <SchoolImage />
-        <button>Szkolne</button>
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          bottom="0"
+          right="0"
+          display="flex"
+          justifyContent="center"
+          alignContent="center"
+          alignItems="center"
+        >
+          <Button color="primary">Szkolne</Button>
+        </Box>
       </Box>
-      <Box maxWidth="300px" width="100%">
+      <Box maxWidth="300px" width="100%" position="relative">
         <SchoolImage />
-        <button>Pracownicze</button>
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          bottom="0"
+          right="0"
+          display="flex"
+          justifyContent="center"
+          alignContent="center"
+          alignItems="center"
+        >
+          <Button color="secondary">Pracownicze</Button>
+        </Box>
       </Box>
     </Box>
   </StyledSectionInfo>
