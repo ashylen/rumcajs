@@ -2,9 +2,9 @@ import React, { useState } from "react"
 
 import MenuIcon from "@material-ui/icons/Menu"
 import { StyledLink, StyledLogoLink } from "./styles"
-import Logo from "components/Logo"
-import LogoWhite from "components/LogoWhite"
-import Sidebar from "components/Sidebar/Sidebar"
+import Logo from "components/atoms/Logo"
+import LogoWhite from "components/atoms/LogoWhite"
+import Sidebar from "components/organisms/Sidebar/Sidebar"
 import { Button } from "@material-ui/core"
 
 const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {

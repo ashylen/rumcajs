@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 import { StyledScrollToTop, StyledAppBar } from "./styles"
-import NavLinks from "../NavLinks/NavLinks"
+import NavLinks from "components/molecules/NavLinks/NavLinks"
 
 const ScrollTop = ({ children, window }) => {
   const trigger = useScrollTrigger({

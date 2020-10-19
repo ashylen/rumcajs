@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import HomeBackgroundImage from "components/simple/BackgroundImage/BackgroundImage"
+import HomeBackgroundImage from "components/atoms/BackgroundImage/BackgroundImage"
 
 export const StyledWrapper = styled.div`
   position: relative;

@@ -11,6 +11,7 @@ import { Typography, Box, Button } from "@material-ui/core"
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import SectionTitle from "components/atoms/SectionTitle"
 
 const HolidaysAtBalticSeaImg = () => {
   const data = useStaticQuery(graphql`
@@ -42,10 +43,9 @@ const SpecialOffersView: React.FC = () => {
   return (
     <StyledSectionInfo>
       <Box textAlign="center">
-        <Typography variant="h1" component="h2" color="primary">
+        <SectionTitle subtitle="zapoznaj się z Naszymi nowościami">
           OFERTY SPECJALNE
-        </Typography>
-        <Typography variant="h5">zapoznaj się z Naszymi nowościami</Typography>
+        </SectionTitle>
 
         <Box margin="50px 0">
           <Slider {...settings}>

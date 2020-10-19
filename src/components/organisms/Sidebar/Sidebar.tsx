@@ -2,7 +2,7 @@ import React from "react"
 
 import { Link, GatsbyLinkProps } from "gatsby"
 import ArrowForwardIos from "@material-ui/icons/ArrowForwardIos"
-import LogoWhite from "components/LogoWhite"
+import LogoWhite from "components/atoms/LogoWhite"
 import ClickAwayListener from "@material-ui/core/ClickAwayListener"
 
 import {
@@ -47,8 +47,6 @@ const Sidebar: React.FC<IProps> = ({ mobileOpen, handleDrawerToggle }) => {
       <StyledLogoLink activeClassName="active" to="/" alt="Strona główna">
         <LogoWhite />
       </StyledLogoLink>
-      {/* <StyledToolbar /> */}
-      <Divider />
       <StyledList>
         <ListItemLink
           onClick={handleDrawerToggle}

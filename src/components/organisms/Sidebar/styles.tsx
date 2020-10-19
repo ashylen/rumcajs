@@ -81,4 +81,8 @@ export const StyledLogoLink = styled(props => <Link {...props} />)`
   padding: 10px 0;
   text-decoration: none;
   position: relative;
+
+  @media (max-width: 599px) {
+    padding: 10px 0 4px;
+  }
 `

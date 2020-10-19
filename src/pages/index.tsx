@@ -5,6 +5,7 @@ import HomeTemplate from "templates/HomeTemplate"
 import SEO from "components/seo"
 import SpecialOffersView from "views/SpecialOffersView"
 import AboutUsView from "views/AboutUsView"
+import TripsView from "views/TripsView"
 
 import {
   StyledWrapper,
@@ -32,6 +33,7 @@ const IndexPage: React.FC = () => {
       </StyledWrapper>
       <SpecialOffersView />
       <AboutUsView />
+      <TripsView />
     </HomeTemplate>
   )
 }

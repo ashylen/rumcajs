@@ -6,10 +6,10 @@ import { createGlobalStyle, keyframes } from "styled-components"
 import { Reset } from "styled-reset"
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
 import { StylesProvider } from "@material-ui/core/styles"
-import Nav from "components/Nav/Nav"
+import Nav from "components/molecules/Nav/Nav"
 
 // Components
-import Footer from "components/Footer/Footer"
+import Footer from "components/organisms/Footer/Footer"
 
 const loading = keyframes`
   0% {
