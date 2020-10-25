@@ -1,31 +1,35 @@
 import styled from "styled-components"
 
-export const StyledSectionTitle = styled.h2`
-  display: inline-block;
-  margin-top: 70px;
+export const StyledWrapper = styled.div`
   position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  margin: auto;
+  margin: 15px;
 
-  &:before {
-    content: "";
-    width: 80%;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    right: 0;
-    height: 2px;
-    background-color: ${({ theme }) => theme.palette.primary.main};
+  @media (max-width: 540px) {
+    margin: 15px 0;
   }
 
-  &:after {
+  .gatsby-image-wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  :after {
     content: "";
-    width: 60%;
     position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
     right: 0;
-    height: 2px;
-    background-color: ${({ theme }) => theme.palette.primary.main};
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
   }
 `

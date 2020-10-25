@@ -2,12 +2,12 @@ import React from "react"
 
 // Modules
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 // Components
 import { StyledSectionInfo } from "./styles"
 import { Box, Button } from "@material-ui/core"
 import SectionTitle from "components/atoms/SectionTitle"
+import Tile from "components/molecules/Tile"
 
 const TripView: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,7 @@ const TripView: React.FC = () => {
           node {
             base
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 400, maxHeight: 400) {
                 aspectRatio
                 base64
                 sizes
@@ -46,49 +46,22 @@ const TripView: React.FC = () => {
       <Box
         textAlign="center"
         display="flex"
-        justifyContent="space-around"
+        justifyContent="center"
         margin="20px"
+        flexWrap="wrap"
       >
-        <Box maxWidth="300px" width="100%" position="relative">
-          <Box>
-            <Img
-              alt="Wycieczki szkolne"
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-            />
-          </Box>
-          <Box
-            position="absolute"
-            top="0"
-            left="0"
-            bottom="0"
-            right="0"
-            display="flex"
-            justifyContent="center"
-            alignContent="center"
-            alignItems="center"
-          >
-            <Button color="primary">Szkolne</Button>
-          </Box>
-        </Box>
-        <Box maxWidth="300px" width="100%" position="relative">
-          <Img
-            alt="Wycieczki szkolne"
-            fluid={data.allFile.edges[1].node.childImageSharp.fluid}
-          />
-          <Box
-            position="absolute"
-            top="0"
-            left="0"
-            bottom="0"
-            right="0"
-            display="flex"
-            justifyContent="center"
-            alignContent="center"
-            alignItems="center"
-          >
-            <Button color="secondary">Pracownicze</Button>
-          </Box>
-        </Box>
+        <Tile
+          text="Szkolne"
+          altText="Wycieczki szkolne"
+          image={data.allFile.edges[0].node.childImageSharp.fluid}
+          link="/wycieczki"
+        />
+        <Tile
+          text="Pracownicze"
+          altText="Wycieczki pracownicze"
+          image={data.allFile.edges[1].node.childImageSharp.fluid}
+          link="/wycieczki"
+        />
       </Box>
     </StyledSectionInfo>
   )
