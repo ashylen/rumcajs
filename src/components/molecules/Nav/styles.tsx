@@ -37,11 +37,13 @@ export const StyledAppBar = styled(AppBar)`
       & > div {
         background-color: ${({ theme }) => theme.palette.primary.main};
         position: relative;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
 
         &:before {
           content: "";
           position: absolute;
-          left: -64px;
+          left: -63px;
           top: 0;
           z-index: 2;
           height: 100%;
@@ -58,7 +60,7 @@ export const StyledAppBar = styled(AppBar)`
         &:after {
           content: "";
           position: absolute;
-          right: -64px;
+          right: -63px;
           top: 0;
           z-index: 2;
           height: 100%;

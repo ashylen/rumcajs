@@ -74,6 +74,7 @@ const Sidebar: React.FC<IProps> = ({ mobileOpen, handleDrawerToggle }) => {
         variant="temporary"
         anchor="left"
         color="primary"
+        transitionDuration={0}
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
