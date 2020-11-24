@@ -28,6 +28,12 @@ const GlobalStyle = createGlobalStyle`
   *, *:after, *:before{
     box-sizing: border-box;
   }
+
+  #gatsby-focus-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const HomeTemplate = ({ children }) => {

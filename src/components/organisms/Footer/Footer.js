@@ -13,6 +13,7 @@ import { phoneNumber, email } from "utils/constants"
 const StyledFooter = styled.footer`
   background-color: #cf2b27;
   color: #fff;
+  margin-top: auto;
 `
 
 const Logo = () => {
@@ -122,32 +123,31 @@ const StyledContactWrapper = styled.div`
 
 const Footer = () => {
   return (
-    <>
-      <StyledFooter>
-        <StyledWrapper>
-          <StyledGatsbyLink to="/" alt="Strona główna">
-            <Logo />
-          </StyledGatsbyLink>
-          <StyledContactWrapper>
-            <StyledContent>
-              <StyledItemHeading>Adres</StyledItemHeading>
-              <StyledItem>Mickiewicza 7, 37-110 Żołynia</StyledItem>
-            </StyledContent>
-            <StyledContent>
-              <StyledItemHeading>Telefon</StyledItemHeading>
-              <StyledLink href={`tel:${phoneNumber}`} alt="Zadzwoń">
-                +48 {phoneNumber}
-              </StyledLink>
-            </StyledContent>
-            <StyledContent>
-              <StyledItemHeading>Email</StyledItemHeading>
-              <StyledLink href={`mailto:${email}`} alt="Napisz e-mail">
-                {email}
-              </StyledLink>
-            </StyledContent>
-            <StyledContent>
-              <div>
-                {/* <StyledLink
+    <StyledFooter>
+      <StyledWrapper>
+        <StyledGatsbyLink to="/" alt="Strona główna">
+          <Logo />
+        </StyledGatsbyLink>
+        <StyledContactWrapper>
+          <StyledContent>
+            <StyledItemHeading>Adres</StyledItemHeading>
+            <StyledItem>Koralewskiego 7, 38-200 Jasło</StyledItem>
+          </StyledContent>
+          <StyledContent>
+            <StyledItemHeading>Telefon</StyledItemHeading>
+            <StyledLink href={`tel:${phoneNumber}`} alt="Zadzwoń">
+              +48 {phoneNumber}
+            </StyledLink>
+          </StyledContent>
+          <StyledContent>
+            <StyledItemHeading>Email</StyledItemHeading>
+            <StyledLink href={`mailto:${email}`} alt="Napisz e-mail">
+              {email}
+            </StyledLink>
+          </StyledContent>
+          <StyledContent>
+            <div>
+              {/* <StyledLink
                   icon
                   target="_blank"
                   linux
@@ -157,40 +157,39 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </StyledLink> */}
-                <StyledLink
-                  icon
-                  target="_blank"
-                  rel="noopener norefferer"
-                  alt="Facebook Rumcajs"
-                  href="https://www.facebook.com/BTRumcajs"
-                >
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </StyledLink>
-              </div>
-            </StyledContent>
-          </StyledContactWrapper>
-
-          <StyledCopy>
-            <div>© Rumcajs</div>
-            <br />
-            <div>
-              Wykonanie strony:{" "}
-              <StyledEmail
-                title="dominik.urban.mail@gmail.com"
-                href="mailto:dominik.urban.mail@gmail.com"
+              <StyledLink
+                icon
                 target="_blank"
-                alt="Developer e-mail"
-                rel="noopener noreferrer"
+                rel="noopener norefferer"
+                alt="Facebook Rumcajs"
+                href="https://www.facebook.com/BTRumcajs"
               >
-                Dominik Urban
-              </StyledEmail>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </StyledLink>
             </div>
-            <br />
-            <div>{new Date().getFullYear()}</div>
-          </StyledCopy>
-        </StyledWrapper>
-      </StyledFooter>
-    </>
+          </StyledContent>
+        </StyledContactWrapper>
+
+        <StyledCopy>
+          <div>© Rumcajs</div>
+          <br />
+          <div>
+            Wykonanie strony:{" "}
+            <StyledEmail
+              title="dominik.urban.mail@gmail.com"
+              href="mailto:dominik.urban.mail@gmail.com"
+              target="_blank"
+              alt="Developer e-mail"
+              rel="noopener noreferrer"
+            >
+              Dominik Urban
+            </StyledEmail>
+          </div>
+          <br />
+          <div>{new Date().getFullYear()}</div>
+        </StyledCopy>
+      </StyledWrapper>
+    </StyledFooter>
   )
 }
 

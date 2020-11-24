@@ -20,7 +20,10 @@ import {
 const IndexPage: React.FC = () => {
   return (
     <HomeTemplate>
-      <SEO isHome title="Rumcajs - strona główna" />
+      <SEO
+        isHome
+        title="Biuro Turystyczne, Wynajem autokarów, autobusów i busów."
+      />
       <StyledWrapper>
         <StyledBackgroundSection>
           <StyledSkew />
@@ -31,9 +34,12 @@ const IndexPage: React.FC = () => {
           </StyledText>
         </StyledBackgroundSection>
       </StyledWrapper>
-      <SpecialOffersView />
+      {/* <SpecialOffersView /> */}
       <AboutUsView />
-      <TripsView />
+      <br />
+      <br />
+      <br />
+      {/* <TripsView /> */}
     </HomeTemplate>
   )
 }

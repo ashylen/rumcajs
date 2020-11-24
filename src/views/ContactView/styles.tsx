@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { StyledSectionWrapper } from "utils/SharedStyles"
 
 export const StyledSectionInfo = styled(StyledSectionWrapper)`
-  background-color: ${({ theme }) => theme.palette.common.white};
+  /* background-color: ${({ theme }) => theme.palette.common.white}; */
 
   h2 {
     display: inline-block;

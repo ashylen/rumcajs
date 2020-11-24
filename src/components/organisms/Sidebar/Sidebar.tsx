@@ -4,8 +4,10 @@ import { Link, GatsbyLinkProps } from "gatsby"
 import ArrowForwardIos from "@material-ui/icons/ArrowForwardIos"
 import LogoWhite from "components/atoms/LogoWhite"
 import ClickAwayListener from "@material-ui/core/ClickAwayListener"
+import CloseIcon from "@material-ui/icons/Close"
 
 import {
+  Button,
   Divider,
   Hidden,
   ListItem,
@@ -59,12 +61,25 @@ const Sidebar: React.FC<IProps> = ({ mobileOpen, handleDrawerToggle }) => {
           icon={<ArrowForwardIosIcon />}
           primary="Kontakt"
         />
-        <ListItemLink
+        {/* <ListItemLink
           to="/wycieczki/"
           icon={<ArrowForwardIosIcon />}
           primary="Wycieczki"
-        />
+        /> */}
       </StyledList>
+      <Button
+        style={{
+          color: "#fff",
+          position: "fixed",
+          top: "10px",
+          right: "10px",
+          backgroundColor: "rgba(0,0,0,0.1)",
+        }}
+        onClick={handleDrawerToggle}
+        color="primary"
+      >
+        <CloseIcon fontSize="large" />
+      </Button>
     </>
   )
 

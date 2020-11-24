@@ -4,7 +4,7 @@ module.exports = {
   pathPrefix: "/rumcajs",
   siteMetadata: {
     title: `Rumcajs`,
-    description: `Rumcajs opis strony`,
+    description: `Wynajem autokarów, autobusów i busów. Biuro turystyczne, przewóz osób oraz wycieczki w miejscowości Jasło.`,
     author: `@ashylen`,
   },
   plugins: [

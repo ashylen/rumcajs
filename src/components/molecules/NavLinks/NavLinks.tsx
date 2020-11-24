@@ -34,21 +34,23 @@ const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {
       >
         Kontakt
       </StyledLink>
-      <StyledLink
+      {/* <StyledLink
         isHome={isHome}
         activeClassName="active"
         to="/wycieczki/"
         alt="Oferta"
       >
         Wycieczki
-      </StyledLink>
-      <Button
-        style={{ color: "#fff", marginLeft: "auto" }}
-        onClick={handleDrawerToggle}
-        color="primary"
-      >
-        <MenuIcon fontSize="large" />
-      </Button>
+      </StyledLink> */}
+      {!mobileOpen && (
+        <Button
+          style={{ color: "#fff", marginLeft: "auto" }}
+          onClick={handleDrawerToggle}
+          color="primary"
+        >
+          <MenuIcon fontSize="large" />
+        </Button>
+      )}
       <Sidebar
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
