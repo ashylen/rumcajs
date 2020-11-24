@@ -22,7 +22,8 @@ const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {
         isHome={isHome}
         activeClassName="active"
         to="/"
-        alt="Strona główna"
+        alt="Przycisk prowadzący do strony głównej"
+        title="Strona główna"
       >
         Strona główna
       </StyledLink>
@@ -30,7 +31,7 @@ const NavLinks: React.FC<{ isHome?: boolean }> = ({ isHome }) => {
         isHome={isHome}
         activeClassName="active"
         to="/kontakt/"
-        alt="Kontakt"
+        alt="Przycisk prowadzący do strony kontaktowej"
       >
         Kontakt
       </StyledLink>

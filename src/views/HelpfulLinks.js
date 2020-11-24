@@ -17,7 +17,7 @@ const StyledH3 = styled.h3`
     content: "";
     width: 70px;
     height: 2px;
-    background-color: #f9e242;
+    background-color: ${({ theme }) => theme.palette.primary.main};
   }
   @media (max-width: 992px) {
     font-size: 2.5rem;
@@ -48,7 +48,7 @@ const StyledList = styled.ul`
 `
 
 const StyledListItem = styled(props => <Link {...props} />)`
-  color: #f9e242;
+  color: #fff;
   padding: 7px 0;
   display: inline-flex;
   font-weight: 600;
@@ -64,7 +64,7 @@ const StyledListItem = styled(props => <Link {...props} />)`
 `
 
 const StyledListItemInline = styled(props => <Link {...props} />)`
-  color: #f9e242;
+  color: #fff;
   display: inline;
   font-weight: 600;
   line-height: 1.3;

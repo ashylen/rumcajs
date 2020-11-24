@@ -26,6 +26,10 @@ const StyledLink = styled.a`
     opacity: 0.8;
     transform: translateY(-3px);
   }
+
+  @media (min-width: 1024px) {
+    pointer-events: none;
+  }
 `
 
 const ContactView: React.FC = () => (

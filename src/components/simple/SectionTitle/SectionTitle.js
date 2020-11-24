@@ -20,7 +20,7 @@ const StyledH1 = styled.h1`
     width: 100px;
     height: 2px;
 
-    background: #f9e242;
+    background: ${({ theme }) => theme.palette.primary.main};
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);

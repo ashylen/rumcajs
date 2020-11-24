@@ -37,7 +37,6 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
   display: flex;
   padding: 20px 10px;
   text-decoration: none;
-  color: #f9e242;
 `
 
 const StyledWrapper = styled.div`
@@ -109,7 +108,7 @@ const StyledLink = styled.a`
 `
 
 const StyledEmail = styled.a`
-  color: #f9e242;
+  color: #fff;
   transition: opacity 0.3s;
 
   &:hover {

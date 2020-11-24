@@ -22,8 +22,8 @@ const StyledFormLink = styled(props => <Link {...props} />)`
   padding: 20px;
   text-decoration: none;
   position: relative;
-  color: #f9e242;
-  border: 2px solid #f9e242;
+  color: ${({ theme }) => theme.palette.primary.main};
+  border: 2px solid ${({ theme }) => theme.palette.primary.main};
   cursor: pointer;
   margin: 20px auto;
   transition: transform 0.3s, color 0.3s, border-color 0.3s;
@@ -41,13 +41,13 @@ const StyledFormLink = styled(props => <Link {...props} />)`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f9e242;
+    background-color: ${({ theme }) => theme.palette.primary.main};
     transform: translateX(-100%);
     transition: transform 0.3s;
   }
 
   &:hover {
-    color: #222;
+    color: #fff;
     border-color: transparent;
 
     &:after {
