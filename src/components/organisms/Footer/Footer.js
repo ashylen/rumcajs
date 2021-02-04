@@ -16,22 +16,6 @@ const StyledFooter = styled.footer`
   margin-top: auto;
 `
 
-const Logo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo-white.png" }) {
-        childImageSharp {
-          fixed(width: 206, height: 68) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
-  return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-}
-
 // @TODO Make single component for logo
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
   display: flex;
@@ -89,6 +73,15 @@ const StyledItem = styled.div`
   padding: 10px 0;
 `
 
+const StyledPFR = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+`
+const StyledPFRWrapper = styled.div`
+  background-color: #fff;
+`
 const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
@@ -121,32 +114,59 @@ const StyledContactWrapper = styled.div`
 `
 
 const Footer = () => {
+  const images = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "logo-white.png" }) {
+        childImageSharp {
+          fixed(width: 206, height: 68) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      pfr_2: file(relativePath: { eq: "PFR_2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1390, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  console.log(images)
   return (
-    <StyledFooter>
-      <StyledWrapper>
-        <StyledGatsbyLink to="/" alt="Strona główna">
-          <Logo />
-        </StyledGatsbyLink>
-        <StyledContactWrapper>
-          <StyledContent>
-            <StyledItemHeading>Adres</StyledItemHeading>
-            <StyledItem>Koralewskiego 7, 38-200 Jasło</StyledItem>
-          </StyledContent>
-          <StyledContent>
-            <StyledItemHeading>Telefon</StyledItemHeading>
-            <StyledLink href={`tel:${phoneNumber}`} alt="Zadzwoń">
-              +48 {phoneNumber}
-            </StyledLink>
-          </StyledContent>
-          <StyledContent>
-            <StyledItemHeading>Email</StyledItemHeading>
-            <StyledLink href={`mailto:${email}`} alt="Napisz e-mail">
-              {email}
-            </StyledLink>
-          </StyledContent>
-          <StyledContent>
-            <div>
-              {/* <StyledLink
+    <>
+      <StyledPFRWrapper>
+        <StyledPFR>
+          <a href={images.pfr_2.childImageSharp.fluid.src}>
+            <Img fluid={images.pfr_2.childImageSharp.fluid} />
+          </a>
+        </StyledPFR>
+      </StyledPFRWrapper>
+      <StyledFooter>
+        <StyledWrapper>
+          <StyledGatsbyLink to="/" alt="Strona główna">
+            <Img fixed={images.logo.childImageSharp.fixed} />
+          </StyledGatsbyLink>
+          <StyledContactWrapper>
+            <StyledContent>
+              <StyledItemHeading>Adres</StyledItemHeading>
+              <StyledItem>Koralewskiego 7, 38-200 Jasło</StyledItem>
+            </StyledContent>
+            <StyledContent>
+              <StyledItemHeading>Telefon</StyledItemHeading>
+              <StyledLink href={`tel:${phoneNumber}`} alt="Zadzwoń">
+                +48 {phoneNumber}
+              </StyledLink>
+            </StyledContent>
+            <StyledContent>
+              <StyledItemHeading>Email</StyledItemHeading>
+              <StyledLink href={`mailto:${email}`} alt="Napisz e-mail">
+                {email}
+              </StyledLink>
+            </StyledContent>
+            <StyledContent>
+              <div>
+                {/* <StyledLink
                   icon
                   target="_blank"
                   linux
@@ -156,39 +176,40 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </StyledLink> */}
-              <StyledLink
-                icon
-                target="_blank"
-                rel="noopener norefferer"
-                alt="Facebook Rumcajs"
-                href="https://www.facebook.com/BTRumcajs"
-              >
-                <FontAwesomeIcon icon={faFacebookF} />
-              </StyledLink>
-            </div>
-          </StyledContent>
-        </StyledContactWrapper>
+                <StyledLink
+                  icon
+                  target="_blank"
+                  rel="noopener norefferer"
+                  alt="Facebook Rumcajs"
+                  href="https://www.facebook.com/BTRumcajs"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </StyledLink>
+              </div>
+            </StyledContent>
+          </StyledContactWrapper>
 
-        <StyledCopy>
-          <div>© Rumcajs</div>
-          <br />
-          <div>
-            Wykonanie strony:{" "}
-            <StyledEmail
-              title="dominik.urban.mail@gmail.com"
-              href="mailto:dominik.urban.mail@gmail.com"
-              target="_blank"
-              alt="Developer e-mail"
-              rel="noopener noreferrer"
-            >
-              Dominik Urban
-            </StyledEmail>
-          </div>
-          <br />
-          <div>{new Date().getFullYear()}</div>
-        </StyledCopy>
-      </StyledWrapper>
-    </StyledFooter>
+          <StyledCopy>
+            <div>© Rumcajs</div>
+            <br />
+            <div>
+              Wykonanie strony:{" "}
+              <StyledEmail
+                title="dominik.urban.mail@gmail.com"
+                href="mailto:dominik.urban.mail@gmail.com"
+                target="_blank"
+                alt="Developer e-mail"
+                rel="noopener noreferrer"
+              >
+                Dominik Urban
+              </StyledEmail>
+            </div>
+            <br />
+            <div>{new Date().getFullYear()}</div>
+          </StyledCopy>
+        </StyledWrapper>
+      </StyledFooter>
+    </>
   )
 }
 
