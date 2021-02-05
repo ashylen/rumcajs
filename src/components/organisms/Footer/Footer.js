@@ -123,9 +123,9 @@ const Footer = () => {
           }
         }
       }
-      pfr_2: file(relativePath: { eq: "PFR_2.jpg" }) {
+      pfr_2: file(relativePath: { eq: "PFR_3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1390, quality: 100) {
+          fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -137,7 +137,11 @@ const Footer = () => {
     <>
       <StyledPFRWrapper>
         <StyledPFR>
-          <a href={images.pfr_2.childImageSharp.fluid.src}>
+          <a
+            href={images.pfr_2.childImageSharp.fluid.src}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Img fluid={images.pfr_2.childImageSharp.fluid} />
           </a>
         </StyledPFR>
